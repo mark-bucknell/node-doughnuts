@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Cinnamon",
+        "description": "The ultimate classic doughnut",
+        "created": "2018-05-28"
+    },
+    {
+        "name": "The OG",
+        "description": "Sweet, crackly, vanilla bean glaze.",
+        "created": "2018-05-28"
+    },
+    {
+        "name": "Jam",
+        "description": "Rolled in sugar and filled with raspberry jam",
+        "created": "2018-05-28"
+    },
+    {
+        "name": "Gaytime",
+        "description": "Honeycomb custard, milk chocolate and biscuit crumble.",
+        "created": "2018-05-28"
+    }
+]

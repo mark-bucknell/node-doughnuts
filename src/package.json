@@ -1,0 +1,21 @@
+{
+  "name": "doughnut-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon ./start.js",
+    "start": "npm run watch",
+    "sample": "node ./data/import_sample_data.js"
+  },
+  "author": "Mark Bucknell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

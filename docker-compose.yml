@@ -1,0 +1,36 @@
+version: "3.2"
+services:
+  nodejs:
+      image: node:8
+      user: "node"
+      volumes:
+        - ./src:/var/www/html
+      working_dir: /var/www/html
+      ports:
+          - "80:8888"
+      command: "npm start"
+      environment:
+        APP_PORT: "8888"
+        DATABASE_CONNECTION: "mongodb://root:example@mongo:27017/doughnut_store"
+      links:
+          - mongo
+  mongo:
+      image: mongo
+      restart: always
+      ports:
+         - "27017:27017"
+      expose:
+         - "27017"
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
+  mongo-express:
+      image: mongo-express
+      restart: always
+      ports:
+        - 8081:8081
+      environment:
+        ME_CONFIG_MONGODB_ADMINUSERNAME: root
+        ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      links:
+          - mongo
